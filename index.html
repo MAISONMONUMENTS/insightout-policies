@@ -4,57 +4,91 @@
 <meta charset="utf-8">
 <title>Insight Out — Soccer Training</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Insight Out — private and small-group soccer training. Sharper touch, calm finishing, faster feet.">
+<link rel="icon" href="icon-1024.png">
 <style>
-  :root { --bg:#0d1117; --card:#161b22; --line:#30363d; --ink:#e6edf3; --muted:#8b949e; --accent:#5df08a; }
-  * { box-sizing: border-box; margin: 0; }
-  body { background:var(--bg); color:var(--ink); font-family:system-ui, Segoe UI, sans-serif; line-height:1.6; padding:24px; }
-  .wrap { max-width:760px; margin:0 auto; }
-  header { text-align:center; padding:48px 0 24px; }
-  h1 { font-size:2.4em; letter-spacing:-0.02em; }
-  .tag { color:var(--muted); margin-top:8px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:28px 0; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; }
-  .card h2 { font-size:1.05em; margin-bottom:6px; }
-  .card p { color:var(--muted); font-size:0.95em; }
-  a { color:var(--accent); text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  footer { text-align:center; color:var(--muted); font-size:0.9em; padding:32px 0 16px; border-top:1px solid var(--line); margin-top:32px; }
-  footer a { margin:0 8px; }
+  :root{--bg:#080b09;--panel:#0f1511;--line:#1e2a22;--ink:#f2f7f3;--muted:#9db0a4;--green:#5df08a;--deep:#0d3b24}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+  .cond{font-family:"Arial Narrow","Helvetica Neue Condensed",Impact,system-ui,sans-serif;text-transform:uppercase;line-height:.95}
+  a{color:var(--green);text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(8,11,9,.82);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:13px}
+  .brand i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--green),#1d7a4c)}
+  .nav-links{display:flex;gap:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 26px;font-weight:750;font-size:14px;background:var(--green);color:#04140a;border:1px solid var(--green)}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,11,9,.94) 20%,rgba(8,11,9,.5) 60%,rgba(8,11,9,.2))}
+  .hero .wrap{position:relative;padding:120px 22px 110px}
+  .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:750}
+  h1{font-size:clamp(46px,9vw,110px);margin:14px 0 12px}
+  h1 span{color:var(--green)}
+  .hero p{max-width:560px;color:var(--muted);font-size:clamp(16px,2.2vw,19px)}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px}
+  .tile{display:block;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px;color:var(--ink)}
+  .tile:hover{border-color:var(--green)}
+  .tile b{display:block;font-size:22px;margin-bottom:6px}
+  .tile span{color:var(--muted);font-size:14px}
+  section{padding:80px 0}
+  h2{font-size:clamp(30px,4.6vw,52px);margin-bottom:10px}
+  .lead{color:var(--muted);max-width:640px}
+  .band{background:linear-gradient(135deg,var(--deep),#08110b);border:1px solid var(--line);border-radius:24px;padding:44px;text-align:center}
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:13px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+  @media(max-width:640px){.nav-links{display:none}.band{padding:30px 20px}.hero .wrap{padding:80px 22px 70px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>Insight Out</h1>
-    <p class="tag">Soccer training. Reps make the difference.</p>
-  </header>
+<nav><div class="wrap">
+  <div class="brand"><i></i> INSIGHT OUT</div>
+  <div class="nav-links"><a href="sessions.html">Training</a><a href="prices.html">Prices</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <a class="btn" href="tel:+15616391645">Book · 561-639-1645</a>
+</div></nav>
 
-  <div class="grid">
-    <div class="card"><h2>Training</h2><p>Drills and finishing practice for players who want to sharpen their game — first touch, turns, and scoring in the box.</p></div>
-    <div class="card"><h2>Content</h2><p>Daily shorts and reels with real drills you can try. Follow along, save the ones that work for you.</p></div>
-    <div class="card"><h2>Where to watch</h2><p>TikTok, Instagram, and YouTube — new content every day.</p></div>
-    <div class="card"><h2>Prices</h2><p>Private and group training packages. <a href="prices.html">See the prices →</a></p></div>
+<header class="hero">
+  <video autoplay muted loop playsinline poster="media/hero.jpg"><source src="media/hero.mp4" type="video/mp4"></video>
+  <div class="veil"></div>
+  <div class="wrap">
+    <p class="kicker">Soccer training · South Florida</p>
+    <h1 class="cond">Reps make<br>the difference<span>.</span></h1>
+    <p>Private and small-group soccer training. Sharper first touch, calmer finishing, faster feet — coached in person, filmed, and tracked.</p>
+    <div class="cta">
+      <a class="btn" href="sessions.html">Start training</a>
+      <a class="btn ghost" href="prices.html">See prices</a>
+    </div>
   </div>
+</header>
 
-  <div class="card" style="text-align:center">
-    <h2>Explore</h2>
-    <p>
-      <a href="about.html">About</a> · <a href="prices.html">Prices</a> · <a href="links.html">Follow</a> · <a href="contact.html">Contact</a>
-    </p>
+<section><div class="wrap">
+  <p class="kicker">Where to go</p>
+  <h2 class="cond">Pick your next step</h2>
+  <div class="tiles">
+    <a class="tile" href="sessions.html"><b>Private training</b><span>1-on-1 packages, the full program and what's coached.</span></a>
+    <a class="tile" href="prices.html"><b>Prices</b><span>Straight numbers for private and group packages.</span></a>
+    <a class="tile" href="about.html"><b>About</b><span>Who coaches, and the standard.</span></a>
+    <a class="tile" href="contact.html"><b>Contact</b><span>Call or text 561-639-1645 to book.</span></a>
   </div>
+</div></section>
 
-  <div class="card" style="text-align:center">
-    <h2>Follow</h2>
-    <p>
-      <a href="https://www.tiktok.com/@insight.out.train">TikTok · @insight.out.train</a><br>
-      <a href="https://www.instagram.com/insightout.fc">Instagram · @insightout.fc</a>
-    </p>
+<section style="padding-top:0"><div class="wrap">
+  <div class="band">
+    <p class="kicker">Ready when they are</p>
+    <h2 class="cond">Book the first session</h2>
+    <p class="lead" style="margin:0 auto 22px">Tell me the player's age, position and the one thing that has to improve — I'll answer with a time.</p>
+    <a class="btn" href="tel:+15616391645">Call 561-639-1645</a>
+    <a class="btn ghost" href="https://wa.me/15616391645" style="margin-left:8px">WhatsApp</a>
   </div>
+</div></section>
 
-  <footer>
-    <a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a>
-    <p style="margin-top:10px">© 2026 Insight Out</p>
-  </footer>
-</div>
+<footer><div class="wrap">
+  <div>© 2026 Insight Out · Soccer Training</div>
+  <div><a href="https://www.instagram.com/insightout.fc">Instagram</a> · <a href="https://www.tiktok.com/@insight.out.train">TikTok</a> · <a href="https://www.youtube.com/@insightoutfc">YouTube</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></div>
+</div></footer>
 </body>
 </html>
